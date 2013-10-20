@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>ColorCoder</title>
+        <link rel="stylesheet" href="styles/master.css">
+        <link rel="stylesheet" href="js/vendor/google-code-prettify/prettify.css"/>
+        <script src="js/vendor/underscore.min.js"></script>
+        <script src="js/vendor/google-code-prettify/prettify.js"></script>
+        <script src='http://codeorigin.jquery.com/jquery-2.0.3.min.js'></script>
+        <link href='http://fonts.googleapis.com/css?family=Nunito:400,700' rel='stylesheet' type='text/css'>
+    </head>
+    <body>
+        
+        <div class="options">
+
+            <form>
+                <div class="input-group">
+                    <label id="pln-label" for="pln">Plain Text</label>
+                    <input id="pln-input" type="text" value="#000">
+                </div>
+                <div class="input-group">
+                    <label id="kwd-label" for="kwd">Keyword</label>
+                    <input id="kwd-input" type="text">
+                </div>
+                <div class="input-group">
+                    <label id="str-label" for="str">Strings</label>
+                    <input id="str-input" type="text">
+                </div>
+                <div class="input-group">
+                    <label id="com-label" for="com">Comments</label>
+                    <input id="com-input" type="text">
+                </div>
+            </form>
+            
+        </div>
+
+
+        <div class="preview">
+
+            <ul class="lang-picker">
+                <li><a href="javascript:void(0)">JavaScript</a></li>
+                <li><a href="javascript:void(0)">Python</a></li>
+                <li><a href="javascript:void(0)">CSS</a></li>
+            </ul>
+
+<pre class="prettyprint"><code>
+$(document).ready( function() {
+
+    if (!!window.jQuery) {
+
+        console.log($)
+
+    }
+
+}
+};
+</code></pre>
+            
+        </div>
+
+    <script src='js/main.js'></script>
+    </body>
+</html>
