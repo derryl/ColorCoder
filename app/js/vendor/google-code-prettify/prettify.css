@@ -1,10 +1,10 @@
-.pln { color: #888; }
+.pln { color: #aa0; }
 .str { color: #080; }
-.kwd { color: #ff7200; }
-.com { color: #800; }
+.kwd { color: #ED993E; }
+.com { color: #59451B; }
 .typ { color: #606; }
 .lit { color: #066; }
-.pun { color: #660; }
+.pun { color: #A6A665; }
 .opn { color: #660; }
 .clo { color: #660; }
 .tag { color: #008; }
@@ -17,6 +17,7 @@
 
 pre.prettyprint {
     padding: 2px;
+    line-height: 1.2em;
 }
 
 ol.linenums {

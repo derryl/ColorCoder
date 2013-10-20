@@ -475,7 +475,25 @@ body {
   line-height: 1.64em;
 }
 a {
-  color: #00D780;
+  color: #00d780;
+}
+h2 {
+  font-size: 21px;
+  color: #000;
+}
+.button {
+  display: block;
+  color: #333;
+  background: #0bff9c;
+  text-align: center;
+  text-decoration: none;
+  margin: 1em;
+  padding: 1em 0;
+  font-size: 1rem;
+  border-radius: 8px;
+}
+.button.white {
+  background: #eee;
 }
 .options {
   position: absolute;
@@ -493,7 +511,10 @@ a {
   height: 100%;
   background: #222;
   box-sizing: border-box;
-  padding: 20px 40px;
+  padding: 0 40px;
+}
+.preview h2 {
+  color: #777;
 }
 .options form .input-group {
   position: relative;
@@ -507,19 +528,43 @@ a {
   width: 100%;
 }
 .options form label {
+  position: relative;
   color: rgba(255, 255, 255, 0.6);
   padding-left: 0.5em;
+}
+.options form label:after {
+  display: block;
+  position: absolute;
+  top: 5px;
+  right: 1em;
+  content: 'i';
+  background: #777;
+  width: 15px;
+  height: 15px;
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 17px;
+  color: #333;
+  border-radius: 15px;
+  cursor: help;
 }
 .options form input[type|=text] {
   background: rgba(255, 255, 255, 0.1);
   border: 0;
   outline: 0;
-  border-radius: 5px;
+  border-radius: 8px;
   padding: 0.5em;
   font-family: 'Nunito', sans-serif;
 }
 .options form input[type|=text].error {
   background: #694040;
+}
+.options-primary-buttons {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
 }
 .lang-picker {
   list-style-type: none;

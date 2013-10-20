@@ -1,3 +1,6 @@
+@defaultPadding: 1em;
+@primaryColor: #00D780;
+
 body {
 	background: #333;
     font-family: 'Nunito', sans-serif;
@@ -5,7 +8,27 @@ body {
 }
 
 a {
-    color: #00D780;
+    color: @primaryColor;
+}
+
+h2 {
+    font-size: 21px;
+    color: #000;
+}
+
+.button {
+    display: block;
+    color: #333;
+    background: lighten(@primaryColor, 10%);
+    text-align: center;
+    text-decoration: none;
+    margin: @defaultPadding;
+    padding: @defaultPadding 0;
+    font-size: 1rem;
+    border-radius: 8px;
+    &.white {
+        background: #eee;
+    }
 }
 
 @options-width: 300px;
@@ -25,7 +48,9 @@ a {
     height: 100%;
     background: #222;
     box-sizing: border-box;
-    padding: 20px 40px;
+    padding: 0 40px;
+    
+    h2 { color: #777; }
 }
 
 //* /* / */ */
@@ -44,20 +69,41 @@ a {
         width: 100%;
     }
     label {
+        position: relative;
         color: rgba(255,255,255,0.6);
         padding-left: @inputPadding;
+        &:after {
+            display: block;
+            position: absolute;
+            top: 5px; right: 1em;
+            content: 'i';
+            background: #777;
+            width: 15px; height: 15px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 17px;
+            color: #333;
+            border-radius: 15px;
+            cursor: help;
+        }
     }
     input[type|=text] {
         background: rgba(255,255,255,0.1);
         border: 0;
         outline:0;
-        border-radius: 5px;
+        border-radius: 8px;
         padding: @inputPadding;
         font-family: 'Nunito', sans-serif;
         &.error {
             background: #694040;
         }
     }
+}
+
+.options-primary-buttons {
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
 }
 
 ///

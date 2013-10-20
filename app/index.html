@@ -12,7 +12,9 @@
         
         <div class="options">
 
-            <form>
+            <h2>Choose your scheme</h2>
+
+            <form id="color-modification">
                 <div class="input-group">
                     <label id="pln-label" for="pln">Plain Text</label>
                     <input id="pln-input" type="text" value="#000">
@@ -31,28 +33,41 @@
                 </div>
             </form>
             
+            <div class="options-primary-buttons">
+                <a href="javascript:void(0)" class="button white">
+                    Save This Theme
+                </a>
+                <a href="javascript:void(0)" class="button">
+                    Download Files
+                </a>
+            </div>
         </div>
 
 
         <div class="preview">
 
-            <ul class="lang-picker">
+            <h2>Switch language</h2>
+
+            <!-- <ul class="lang-picker">
                 <li><a href="javascript:void(0)">JavaScript</a></li>
                 <li><a href="javascript:void(0)">Python</a></li>
                 <li><a href="javascript:void(0)">CSS</a></li>
-            </ul>
+            </ul> -->
 
-<pre class="prettyprint"><code>
-$(document).ready( function() {
+<pre class="prettyprint"><code>$(document).ready( function() {
 
-    if (!!window.jQuery) {
+    // this is simply to set things up
+    var foo = 'bar';
 
-        console.log($)
-
+    // here is where the real magic happens
+    function isFooBar(foo) {
+        return (foo === bar) ? true : false
     }
 
-}
-};
+    compareFooBar('foo')
+    compareFooBar('bar')
+    compareFooBar('dog')
+});
 </code></pre>
             
         </div>
