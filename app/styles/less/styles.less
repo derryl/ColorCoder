@@ -13,7 +13,24 @@ a {
 
 h2 {
     font-size: 21px;
-    color: #000;
+    color: #ddd;
+}
+
+/*::selection {
+background-color:#CC0000;
+}*/
+
+::selection {
+    background-color: @primaryColor;
+    color: #fff;
+}
+::-moz-selection {
+    background-color: @primaryColor;
+    color: #fff;
+}
+::-webkit-selection {
+    background-color: @primaryColor;
+    color: #fff;
 }
 
 .button {
@@ -31,14 +48,44 @@ h2 {
     }
 }
 
+.dropdown {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    border-radius: 8px;
+    border: 2px solid #555;
+    padding: .5em 2em .5em 1em;
+    &:after {
+        content: '';
+        position: absolute;
+        top: 40%; right: 1em;
+        display: block;
+        width: 0;
+        height: 0px;
+        border-style: solid;
+        border-width: 4px 0 4px 5px;
+        border-color: transparent transparent transparent #555;
+    }
+    &:hover {
+        border-color: #666;
+        &:after {
+            border-color: transparent transparent transparent #aaa;
+        }
+    }
+    & + .dropdown {
+        margin-left: 1em;
+    }
+}
+
 @options-width: 300px;
 
-.options {
+.scheme-options {
     position: absolute;
     top: 0; left: 0;
     height: 100%;
     width: @options-width;
     box-sizing: border-box;
+    h2 { padding-left: 1em; }
 }
 
 .preview {
@@ -48,14 +95,14 @@ h2 {
     height: 100%;
     background: #222;
     box-sizing: border-box;
-    padding: 0 40px;
+    padding: 1em 40px;
     
     h2 { color: #777; }
 }
 
 //* /* / */ */
 
-.options form {
+.scheme-options form {
     @inputPadding: .5em;
 
     .input-group {
@@ -75,7 +122,7 @@ h2 {
         &:after {
             display: block;
             position: absolute;
-            top: 5px; right: 1em;
+            top: 4px; right: 1em;
             content: 'i';
             background: #777;
             width: 15px; height: 15px;
@@ -86,18 +133,19 @@ h2 {
             color: #333;
             border-radius: 15px;
             cursor: help;
+            opacity: 0.6;
         }
     }
     input[type|=text] {
-        background: rgba(255,255,255,0.1);
+        background: #666;
         border: 0;
         outline:0;
         border-radius: 8px;
         padding: @inputPadding;
         font-family: 'Nunito', sans-serif;
-        &.error {
-            background: #694040;
-        }
+        &.error { background: #694040; }
+        &:active,
+        &:focus { background: #888 }
     }
 }
 
@@ -126,4 +174,10 @@ h2 {
         box-sizing: border-box;
         text-decoration: none;
     }
+}
+
+///
+
+.pre, code {
+    font-family: 'Menlo';
 }

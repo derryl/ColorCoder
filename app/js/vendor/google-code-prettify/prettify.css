@@ -16,8 +16,9 @@
 
 
 pre.prettyprint {
-    padding: 2px;
+    margin-top: 2em;
     line-height: 1.2em;
+    font-family: 'Menlo', monospace, sans-serif;
 }
 
 ol.linenums {

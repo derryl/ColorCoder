@@ -479,7 +479,22 @@ a {
 }
 h2 {
   font-size: 21px;
-  color: #000;
+  color: #ddd;
+}
+/*::selection {
+background-color:#CC0000;
+}*/
+::selection {
+  background-color: #00d780;
+  color: #fff;
+}
+::-moz-selection {
+  background-color: #00d780;
+  color: #fff;
+}
+::-webkit-selection {
+  background-color: #00d780;
+  color: #fff;
 }
 .button {
   display: block;
@@ -495,13 +510,45 @@ h2 {
 .button.white {
   background: #eee;
 }
-.options {
+.dropdown {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  border-radius: 8px;
+  border: 2px solid #555;
+  padding: .5em 2em .5em 1em;
+}
+.dropdown:after {
+  content: '';
+  position: absolute;
+  top: 40%;
+  right: 1em;
+  display: block;
+  width: 0;
+  height: 0px;
+  border-style: solid;
+  border-width: 4px 0 4px 5px;
+  border-color: transparent transparent transparent #555;
+}
+.dropdown:hover {
+  border-color: #666;
+}
+.dropdown:hover:after {
+  border-color: transparent transparent transparent #aaa;
+}
+.dropdown + .dropdown {
+  margin-left: 1em;
+}
+.scheme-options {
   position: absolute;
   top: 0;
   left: 0;
   height: 100%;
   width: 300px;
   box-sizing: border-box;
+}
+.scheme-options h2 {
+  padding-left: 1em;
 }
 .preview {
   position: absolute;
@@ -511,31 +558,31 @@ h2 {
   height: 100%;
   background: #222;
   box-sizing: border-box;
-  padding: 0 40px;
+  padding: 1em 40px;
 }
 .preview h2 {
   color: #777;
 }
-.options form .input-group {
+.scheme-options form .input-group {
   position: relative;
   overflow: auto;
   padding: 0 1em;
   margin-top: 1em;
 }
-.options form label,
-.options form input[type|=text] {
+.scheme-options form label,
+.scheme-options form input[type|=text] {
   display: block;
   width: 100%;
 }
-.options form label {
+.scheme-options form label {
   position: relative;
   color: rgba(255, 255, 255, 0.6);
   padding-left: 0.5em;
 }
-.options form label:after {
+.scheme-options form label:after {
   display: block;
   position: absolute;
-  top: 5px;
+  top: 4px;
   right: 1em;
   content: 'i';
   background: #777;
@@ -548,17 +595,22 @@ h2 {
   color: #333;
   border-radius: 15px;
   cursor: help;
+  opacity: 0.6;
 }
-.options form input[type|=text] {
-  background: rgba(255, 255, 255, 0.1);
+.scheme-options form input[type|=text] {
+  background: #666;
   border: 0;
   outline: 0;
   border-radius: 8px;
   padding: 0.5em;
   font-family: 'Nunito', sans-serif;
 }
-.options form input[type|=text].error {
+.scheme-options form input[type|=text].error {
   background: #694040;
+}
+.scheme-options form input[type|=text]:active,
+.scheme-options form input[type|=text]:focus {
+  background: #888888;
 }
 .options-primary-buttons {
   position: absolute;
@@ -586,4 +638,8 @@ h2 {
   display: block;
   box-sizing: border-box;
   text-decoration: none;
+}
+.pre,
+code {
+  font-family: 'Menlo';
 }
