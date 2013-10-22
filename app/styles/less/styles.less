@@ -1,5 +1,6 @@
 @defaultPadding: 1em;
 @primaryColor: #00D780;
+@textSelectionColor: #aaa;
 
 body {
 	background: #333;
@@ -16,20 +17,16 @@ h2 {
     color: #ddd;
 }
 
-/*::selection {
-background-color:#CC0000;
-}*/
-
 ::selection {
-    background-color: @primaryColor;
+    background-color: @textSelectionColor;
     color: #fff;
 }
 ::-moz-selection {
-    background-color: @primaryColor;
+    background-color: @textSelectionColor;
     color: #fff;
 }
 ::-webkit-selection {
-    background-color: @primaryColor;
+    background-color: @textSelectionColor;
     color: #fff;
 }
 
@@ -146,6 +143,16 @@ background-color:#CC0000;
         &.error { background: #694040; }
         &:active,
         &:focus { background: #888 }
+    }
+    input[type|=color] {
+        /*border: none;
+        outline: 0;
+        background-color: #333;
+        padding: 0;
+        display: block;
+        -webkit-appearance: none;
+        border-radius: 3px;
+        cursor: pointer;*/
     }
 }
 

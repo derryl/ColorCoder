@@ -481,19 +481,16 @@ h2 {
   font-size: 21px;
   color: #ddd;
 }
-/*::selection {
-background-color:#CC0000;
-}*/
 ::selection {
-  background-color: #00d780;
+  background-color: #aaaaaa;
   color: #fff;
 }
 ::-moz-selection {
-  background-color: #00d780;
+  background-color: #aaaaaa;
   color: #fff;
 }
 ::-webkit-selection {
-  background-color: #00d780;
+  background-color: #aaaaaa;
   color: #fff;
 }
 .button {
@@ -611,6 +608,17 @@ background-color:#CC0000;
 .scheme-options form input[type|=text]:active,
 .scheme-options form input[type|=text]:focus {
   background: #888888;
+}
+.scheme-options form input[type|=color] {
+  /*border: none;
+        outline: 0;
+        background-color: #333;
+        padding: 0;
+        display: block;
+        -webkit-appearance: none;
+        border-radius: 3px;
+        cursor: pointer;*/
+
 }
 .options-primary-buttons {
   position: absolute;
